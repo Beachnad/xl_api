@@ -75,7 +75,7 @@ jobs:
       - name: Add App to Zip file
         run: |
           ls
-          cd ./app && zip -g ../api.zip -r .
+          cd ./xl_api && zip -g ../api.zip -r .
 
       # Step 9
       - name: Upload zip file artifact
