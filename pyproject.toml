@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "celery_demo"
+name = "xl_api"
 version = "0.1.0"
 description = ""
 authors = ["Danny Beachnau <DannyBeachnau@gmail.com>"]

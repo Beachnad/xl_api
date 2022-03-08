@@ -63,12 +63,19 @@ jobs:
       # Step 7
       - name: Create Zipfile archive of Dependencies
         run: |
-          cd .venv/Lib/site-packages
-          zip -r9 ../../../../api.zip .
+          poetry export -f requirements.txt --without-hashes -o requirements.txt
+          poetry run pip install . -r requirements.txt -t package_tmp
+          cd package_tmp
+          find . -name "*.pyc" -delete
+          zip -r9 ../api.zip .
+#          cd .venv/Lib/site-packages
+#          zip -r9 ../../../../api.zip .
 
       # Step 8
       - name: Add App to Zip file
-        run: cd ./app && zip -g ../api.zip -r .
+        run: |
+          la
+          cd ./app && zip -g ../api.zip -r .
 
       # Step 9
       - name: Upload zip file artifact
