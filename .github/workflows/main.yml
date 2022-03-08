@@ -74,7 +74,7 @@ jobs:
       # Step 8
       - name: Add App to Zip file
         run: |
-          la
+          ls
           cd ./app && zip -g ../api.zip -r .
 
       # Step 9
