@@ -60,19 +60,19 @@ jobs:
 #          pytest tests/
 #          coverage report
 #
-#      # Step 7
-#      - name: Create Zipfile archive of Dependencies
-#        run: |
-#          cd ./venv/lib/python3.7/site-packages
-#          zip -r9 ../../../../api.zip .
-#
-#      # Step 8
-#      - name: Add App to Zip file
-#        run: cd ./app && zip -g ../api.zip -r .
-#
-#      # Step 9
-#      - name: Upload zip file artifact
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: api
-#          path: api.zip
+      # Step 7
+      - name: Create Zipfile archive of Dependencies
+        run: |
+          cd ./venv/lib/python3.7/site-packages
+          zip -r9 ../../../../api.zip .
+
+      # Step 8
+      - name: Add App to Zip file
+        run: cd ./app && zip -g ../api.zip -r .
+
+      # Step 9
+      - name: Upload zip file artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: api
+          path: api.zip
