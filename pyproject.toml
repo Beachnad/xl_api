@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "celery_demo"
+version = "0.1.0"
+description = ""
+authors = ["Danny Beachnau <DannyBeachnau@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+celery = "^5.2.3"
+pywin32 = "^303"
+pandas = "^1.4.1"
+openpyxl = "^3.0.9"
+attrs = "^21.4.0"
+fastapi = "^0.74.1"
+uvicorn = {extras = ["standard"], version = "^0.17.5"}
+python-multipart = "^0.0.5"
+loguru = "^0.6.0"
+requests = "^2.27.1"
+aws-cdk-lib = "^2.13.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
